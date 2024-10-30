@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuarios</title>
+    <link rel="stylesheet" href="/styles/admin/editar-usuarios.css">
+</head>
+<body>
+    <!-- CRUD Usuarios -->
+    <div class="container-usuarios">
+        <h1>Actualizar</h1>
+        <h2>Usuario</h2>
+        <form>
+            <select name="tipo-usuario" id="tipo-usuario">
+                <option value="Estudiante">Estudiante</option>
+                <option value="Docente">Docente</option>
+                <option value="Administrativo">Administrativo</option>
+            </select>
+            <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+            <input type="email" name="email" id="email" placeholder="Correo" required>
+            <input type="tel" name="celular" id="celular" placeholder="Celular" required>
+
+            <div class="info-login">
+                <hr>
+                <p>Información de Ingreso</p>
+                <hr>
+                <input type="number" name="id" id="id" placeholder="ID" required>
+
+                <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required>
+
+                <input type="password" id="psw" name="psw" placeholder="Contraseña" required>
+            </div>
+            <button id="actualizar" type="submit">Actualizar</button>
+        </form>
+    </div>
+</body>
+</html>

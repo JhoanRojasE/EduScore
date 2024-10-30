@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Asignaturas</title>
+    <link rel="stylesheet" href="/styles/admin/crud-asignaturas.css">
+</head>
+<body>
+    <h1>CRUD Asignaturas</h1>
+
+    <!-- Contenedor de la notificación -->
+    <div id="notificacion" class="notificacion">
+        ¡Asignatura eliminada con éxito!
+    </div>
+
+    <div class="lista">
+        <table>
+            <tr>
+                <th>NRC</th>
+                <th>Asignatura</th>
+                <th>Docente</th>
+                <th>Modalidad</th>
+                <th class="crud">Editar</th>
+                <th class="crud">Eliminar</th>
+            </tr>
+            <tr>
+                <td>9358</td>
+                <td>Metodologías Ágiles</td>
+                <td>Pedrito Franco</td>
+                <td>Presencial</td>
+                <td><a href="/html/admin/editar-asignaturas.html"><button id="edit">Editar</button></a></td>
+                <td><button id="delete" onclick="mostrarNotificacion()">Eliminar</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // Función para mostrar la notificación
+        function mostrarNotificacion() {
+            const notificacion = document.getElementById("notificacion");
+            notificacion.classList.add("mostrar");
+
+            // Ocultar la notificación después de 3 segundos
+            setTimeout(() => {
+                notificacion.classList.remove("mostrar");
+            }, 3000);
+        }
+
+    </script>
+    </body>
+    
+    </html>

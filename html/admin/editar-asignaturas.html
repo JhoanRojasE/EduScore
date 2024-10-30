@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Asignaturas</title>
+    <link rel="stylesheet" href="/styles/admin/editar-asignaturas.css">
+</head>
+<body>
+    <!-- CRUD Asignaturas -->
+    <div class="container-asignaturas">
+        <h1>Actualizar</h1>
+        <h2>Asignatura</h2>
+        <form>
+            <select name="modalidad" id="modalidad">
+                <option value="Presencial">Presencial</option>
+                <option value="Virtual">Virtual</option>
+                <option value="Distancia">Distancia</option>
+            </select>
+            <input type="text" id="name" name="name" placeholder="Nombre Asignatura" required>
+            <select name="docente" id="docente" placeholder="Seleccione un Docente">
+                <option disabled selected>Seleccione un Docente</option>
+            </select>
+            <div class="nrc">
+                <input type="number" name="nrc" id="nrc" placeholder="NRC" required>
+            </div>
+            <button id="actualizar" type="submit">Actualizar</button>
+        </form>
+    </div>
+</body>
+</html>
